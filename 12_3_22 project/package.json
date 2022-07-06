@@ -1,0 +1,23 @@
+{
+  "name": "miniproject",
+  "version": "1.0.0",
+  "description": "my first project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Likhitha1802/HeroVired-Training.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Likhitha1802/HeroVired-Training/issues"
+  },
+  "homepage": "https://github.com/Likhitha1802/HeroVired-Training#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.6"
+  }
+}

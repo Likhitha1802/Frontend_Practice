@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login to see your books</title>
+    </head>
+    <body>
+        <form action="/loginreq" method="POST">
+            <center>
+                Username : <input type ="text" name="username" >
+                <br><br>
+                Password : <input type = "password" name="userpassword" >
+                <br><br>
+                <p id="errorMessage" style="display:none;"></p>
+                <button type="submit">Submit</button>
+                
+            </center>
+         
+        </form>
+        <!-- <script>
+            function handleform(){
+                var username = document.getElementById("username").value;
+                var userpassword = document.getElementById("userpassword").value;
+                if(username == 'likhi' && userpassword == '124'){
+                    location.href="http://localhost:3000/";
+                }
+                else{
+                    document.getElementById("errorMessage").style.display = "block";
+                    document.getElementById("errorMessage").innerHTML = "your username and password combo is incorrect";
+
+                }
+
+            } 
+        </script> -->
+    </body>
+</html>

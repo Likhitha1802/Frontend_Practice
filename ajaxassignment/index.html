@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignmet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div style="display:flex; justify-content:center">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Name : </td>
+                    <td>
+                        <p id="name"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rollno. : </td>
+                    <td>
+                        <p id="rollno"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Contact NO : </td>
+                    <td>
+                        <p id="cnt"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Branch : </td>
+                    <td>
+                        <p id="brn"></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+    
+        function datahandler(){
+            var data = JSON.parse(this.responseText);
+            console.log(data);
+            document.getElementById("name").innerHTML=data.Name;
+            document.getElementById("rollno").innerHTML=data.Rollno;
+            document.getElementById("brn").innerHTML=data.Branch;
+            document.getElementById("cnt").innerHTML=data.Contact_No;
+        }
+    
+        function error(err){
+            console.log("Fetch Error : " , err);
+        }
+    
+        var req = new XMLHttpRequest();
+        req.onload = datahandler;
+        req.oneerror = error;
+        req.open("get" , "/data" , true);
+        req.send();
+    
+    </script>
+
+</body>
+</html>
